@@ -1,0 +1,115 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "logo": {
+    "type": "auto",
+    "color": {
+      "1": "#ee82ee",
+      "2": "#ee82ee",
+      "3": "#ee82ee"
+    }
+  },
+  "display": {
+    "separator": " : ",
+    "color": {
+      "separator": "#e6c2e6"
+    }
+  },
+  "modules": [
+    {
+      "type": "title",
+      "format": "   {user-name-colored} @ {host-name-colored}",
+      "color": {
+        "user": "#ee82ee",
+        "host": "#e6c2e6"
+      }
+    },
+    {
+      "type": "custom",
+      "format": "┌──────────────────────────────────────────────────┐",
+      "outputColor": "#ee82ee"
+    },
+    {
+      "type": "host",
+      "key": "  Chassis",
+      "keyColor": "#ee82ee",
+      "outputColor": "#e6c2e6"
+    },
+    {
+      "type": "os",
+      "key": "  OS",
+      "keyColor": "#ee82ee",
+      "outputColor": "#e6c2e6"
+    },
+    {
+      "type": "kernel",
+      "key": "  Kernel",
+      "keyColor": "#ee82ee",
+      "outputColor": "#e6c2e6"
+    },
+    {
+      "type": "display",
+      "key": "  Display",
+      "keyColor": "#ee82ee",
+      "outputColor": "#e6c2e6"
+    },
+    {
+      "type": "terminal",
+      "key": "  Terminal",
+      "keyColor": "#ee82ee",
+      "outputColor": "#e6c2e6"
+    },
+    {
+      "type": "wm",
+      "key": "  WM",
+      "keyColor": "#ee82ee",
+      "outputColor": "#e6c2e6"
+    },
+    {
+      "type": "custom",
+      "format": "└──────────────────────────────────────────────────┘",
+      "outputColor": "#ee82ee"
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "┌──────────────────────────────────────────────────┐",
+      "outputColor": "#ee82ee"
+    },
+    {
+      "type": "cpu",
+      "key": "  CPU",
+      "keyColor": "#ee82ee",
+      "outputColor": "#e6c2e6"
+    },
+    {
+      "type": "gpu",
+      "key": "  GPU",
+      "keyColor": "#ee82ee",
+      "outputColor": "#e6c2e6"
+    },
+    {
+      "type": "disk",
+      "key": "  Disk",
+      "keyColor": "#ee82ee",
+      "outputColor": "#e6c2e6"
+    },
+    {
+      "type": "memory",
+      "key": "  Memory",
+      "keyColor": "#ee82ee",
+      "outputColor": "#e6c2e6"
+    },
+    {
+      "type": "uptime",
+      "key": "  Uptime",
+      "keyColor": "#ee82ee",
+      "outputColor": "#e6c2e6"
+    },
+    {
+      "type": "custom",
+      "format": "└──────────────────────────────────────────────────┘",
+      "outputColor": "#ee82ee"
+    },
+    "break",
+  ]
+}
