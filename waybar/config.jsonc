@@ -1,0 +1,102 @@
+{
+  "layer": "top",
+  "margin-top": 4,
+  "margin-left": 4,
+  "margin-right": 4,
+  "margin-bottom": 0,
+  "modules-left": [
+    "custom/launcher",
+    "hyprland/workspaces",
+    "custom/terminal"
+  ],
+  "modules-center": [
+    "custom/updates",
+    "custom/weather"
+  ],
+  "modules-right": [
+    "custom/clipboard",
+    "memory",
+    "cpu",
+    "pulseaudio",
+    "battery",
+    "clock"
+  ],
+  "clock": {
+    "timezone": "America/Argentina/Buenos_Aires",
+    "format": "{:%a, %d. %b  %H:%M%p}"
+  },
+  "hyprland/workspaces": {
+    "format": "{name}",
+    "persistent-workspaces": {
+      "*": 4,
+      "HDMI-A-1": 4
+    }
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{icon}{volume}% ",
+    "format-muted": "",
+    "format-icons": {
+      "alsa_output.pci-0000_00_1f.3.analog-stereo": "🔊",
+      "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "",
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "phone-muted": "",
+      "portable": "",
+      "car": "",
+      "default": [
+        "",
+        ""
+      ]
+    },
+    "scroll-step": 1,
+    "on-click": "pavucontrol",
+    "ignored-sinks": [
+      "Easy Effects Sink"
+    ]
+  },
+  "custom/launcher": {
+    "format": "{}",
+    "max-length": 10,
+    "on-click": "pkill $menu || .config/rofi/launcher.sh",
+    "interval": 0
+  },
+  "cpu": {
+    "interval": 5,
+    "format": " {usage}%",
+    "max-length": 10
+  },
+  "custom/weather": {
+    "exec": "~/.config/waybar/scripts/weather.sh",
+    "interval": 1800,
+    "return-type": "json",
+    "format": "{}"
+  },
+  "custom/clipboard": {
+    // "exec": "cliphist list | wc -l",
+    // "interval": 5,
+    "format": "{}",
+    "tooltip": "Clipboard items",
+    "on-click": "~/.local/bin/clipboard.sh"
+  },
+  "custom/terminal": {
+    "format": "🖥️ Terminal",
+    "on-click": "kitty"
+  },
+  "custom/updates": {
+    "format": "{} {icon}",
+    "return-type": "json",
+    "format-icons": {
+      "has-updates": "󱍷",
+      "updated": "󰂪"
+    },
+    "exec-if": "which waybar-module-pacman-updates",
+    "exec": "waybar-module-pacman-updates --interval-seconds 300 --network-interval-seconds 3000"
+  },
+  "memory": {
+    "interval": 60,
+    "format": "󰘚 {used:0.1f}G/32G"
+  }
+}

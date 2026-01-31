@@ -1,0 +1,141 @@
+
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "SF Pro", "JetBrainsMono Nerd Font", Arial, Helvetica, sans-serif;
+  font-size: 1.02rem;
+  font-weight: 500;
+  min-height: 0;
+}
+
+window#waybar {
+  background: transparent;
+  color: #f8acff;
+}
+
+/* ===== TOOLTIP ===== */
+
+tooltip {
+  background: #361e3e;
+  border: 1px solid #8f44a7;
+  border-radius: 10px;
+}
+
+tooltip label {
+  color: #e9a7ff;
+}
+
+/* ===== SECTORES UNIFICADOS ===== */
+
+.modules-left,
+.modules-center,
+.modules-right {
+  background-color: rgb(51, 0, 53);   
+  border: 2px solid #76398a;
+  margin: 0;
+  padding: 0 4px;
+}
+
+.modules-left {
+  border-radius: 0 80px 0 0;
+}
+
+.modules-center {
+  border-radius: 0 80px 0 80px;
+}
+
+.modules-right {
+  border-radius: 0 0 0 80px;
+}
+
+/* ===== MÓDULOS ===== */
+
+#mode,
+#clock,
+#pulseaudio,
+#network,
+#cpu,
+#memory,
+#battery,
+#tray,
+#custom-weather,
+#custom-clipboard,
+#custom-terminal,
+#custom-updates,
+#custom-launcher {
+  padding: 0 15px 0 12px;
+  color: #f8acff;
+  background: transparent;
+  border: none;
+  margin: 0;
+}
+
+#mode {
+  background: #64727d;
+  border-bottom: 3px solid white;
+}
+
+#custom-launcher:hover {
+  background-color: rgba(243, 178, 255, 0.2);
+  color: #ffffff;
+  border-radius: 10px;
+}
+
+/* ===== WORKSPACES ===== */
+
+#workspaces {
+  background: transparent;
+  border: none;
+  margin: 0;
+  padding: 0 4px;
+}
+
+#workspaces button {
+  background-color: transparent;
+  color: #f8acff;
+  border-radius: 12px;
+  padding: 0 8px;
+  margin: 4px 2px;
+  border: none;
+}
+
+#workspaces button:hover {
+  background-color: rgba(243, 178, 255, 0.3);
+  color: #ffffff;
+}
+
+#workspaces button.active {
+  background-color: rgb(243, 178, 255);
+  color: #361e3e;
+}
+
+/* ===== SEPARADORES ===== */
+
+#clock,
+#pulseaudio,
+#network,
+#cpu,
+#memory,
+#battery,
+#workspaces,
+#custom-weather,
+#custom-clipboard,
+#custom-terminal,
+#custom-updates {
+  border-left: 1px solid rgba(99, 51, 115, 0.5);
+}
+
+.modules-left > widget:first-child > *,
+.modules-center > widget:first-child > *,
+.modules-right > widget:first-child > * {
+  border-left: none;
+}
+
+/* ===== ANIMACIONES ===== */
+
+@keyframes blink {
+  to {
+    background-color: #ffffff;
+    color: black;
+  }
+}
